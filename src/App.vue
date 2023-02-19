@@ -64,7 +64,7 @@ const cancel = (arr) =>{
  */
 const addOrEditItem = (data) =>{
   const { itemArray, index } = data;
-  if(!isCanceled){
+
     shoppingListItems.value.splice(index, 1, 
       { 
         id: itemArray.id, 
@@ -74,8 +74,7 @@ const addOrEditItem = (data) =>{
       }
     )
     localStorage.setItem('shoppingListItems', JSON.stringify(shoppingListItems.value))
-  }
-    
+
 }
 
 onMounted(() =>{
